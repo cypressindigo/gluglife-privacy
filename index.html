@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GlugLife</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0D1B2A;
+      --cyan:   #4DDBFF;
+      --ocean:  #0288D1;
+      --text:   #E8F0F6;
+      --muted:  #7A9BB5;
+      --card:   #112236;
+      --border: #1E3A55;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(77,219,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .drop {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--cyan), var(--ocean));
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 20px rgba(77,219,255,0.4);
+      flex-shrink: 0;
+    }
+    .app-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--cyan);
+      letter-spacing: 0.02em;
+    }
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Intro card ── */
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      color: #a8c5d8;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.8rem;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    h2 .num {
+      color: var(--cyan);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      background: rgba(77,219,255,0.1);
+      border: 1px solid rgba(77,219,255,0.25);
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+    }
+    h3 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ocean);
+      margin: 1.6rem 0 0.6rem;
+    }
+    p {
+      margin-bottom: 0.9rem;
+      color: #c5d8e8;
+      font-size: 0.95rem;
+    }
+    ul {
+      list-style: none;
+      margin: 0.4rem 0 1rem 0;
+      padding: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.45rem;
+      color: #c5d8e8;
+      font-size: 0.95rem;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.62em;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      opacity: 0.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+    }
+    .contact-block p { margin: 0.25rem 0; font-size: 0.93rem; }
+    .contact-block .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      header { padding: 2rem 1.25rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <div class="drop"></div>
+    <span class="app-name">GlugLife</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective Date: May 21, 2025</p>
+</header>
+
+<main>
+
+  <div class="intro">
+    GlugLife is a water tracking application developed by Cypress Indigo. This Privacy Policy explains what information we collect, how we use it, and your rights in relation to it. By using GlugLife, you agree to the practices described in this policy.
+  </div>
+
+  <section>
+    <h2><span class="num">01</span> Information We Collect</h2>
+    <h3>Information You Provide</h3>
+    <p>When you use GlugLife, you may provide:</p>
+    <ul>
+      <li>Your daily water intake goal</li>
+      <li>Custom glass sizes and hydration log entries</li>
+      <li>Notification preferences including reminder times and intervals</li>
+      <li>In-app purchase selections (Pro subscription)</li>
+    </ul>
+    <h3>Information Collected Automatically</h3>
+    <p>GlugLife stores all hydration data locally on your device using AsyncStorage. We do not collect or transmit your hydration logs to any external server.</p>
+    <p>If you subscribe to GlugLife Pro, our payment processor RevenueCat may collect:</p>
+    <ul>
+      <li>Purchase history and subscription status</li>
+      <li>Device identifiers for purchase verification</li>
+      <li>Transaction data processed through Google Play</li>
+    </ul>
+    <p>RevenueCat's privacy policy is available at: <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></p>
+    <h3>Analytics and Crash Reporting</h3>
+    <p>GlugLife does not currently use third-party analytics or crash reporting services. No usage data is sent to Cypress Indigo servers.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> How We Use Your Information</h2>
+    <p>We use the information described above solely to:</p>
+    <ul>
+      <li>Operate core app functionality (tracking, streaks, badges, reminders)</li>
+      <li>Verify and manage your GlugLife Pro subscription status</li>
+      <li>Deliver local push notifications you have enabled</li>
+      <li>Improve app performance in future updates</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Data Storage and Security</h2>
+    <p>All hydration data (logs, goals, settings) is stored exclusively on your device and is never uploaded to our servers. This means:</p>
+    <ul>
+      <li>Your data is private by default</li>
+      <li>Uninstalling the app will permanently delete all local data</li>
+      <li>We cannot recover your data if your device is lost or reset</li>
+    </ul>
+    <p>Subscription and purchase data is managed by RevenueCat and Google Play, which maintain their own security standards and data protection practices.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> App Permissions</h2>
+    <p>GlugLife requests the following device permissions:</p>
+    <ul>
+      <li><strong style="color:#e8f0f6;">POST_NOTIFICATIONS</strong> — to send water reminders and daily summaries</li>
+      <li><strong style="color:#e8f0f6;">SCHEDULE_EXACT_ALARM</strong> — to deliver reminders at precise times on Android 12+</li>
+      <li><strong style="color:#e8f0f6;">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</strong> — to ensure reminders are not suppressed by battery management</li>
+    </ul>
+    <p>You may revoke these permissions at any time through your device Settings. Revoking notification permissions will disable reminders but will not affect core tracking functionality.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Children's Privacy</h2>
+    <p>GlugLife is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through GlugLife, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Third-Party Services</h2>
+    <p>GlugLife integrates with the following third-party services:</p>
+    <ul>
+      <li><strong style="color:#e8f0f6;">Google Play</strong> — app distribution and payment processing</li>
+      <li><strong style="color:#e8f0f6;">RevenueCat</strong> — subscription management and purchase verification</li>
+    </ul>
+    <p>These services have their own privacy policies, which govern how they handle your data. We encourage you to review them independently.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Your Rights and Choices</h2>
+    <p>Because GlugLife stores data locally on your device, you have full control over it:</p>
+    <ul>
+      <li>Reset Today's Data — available in Settings &rsaquo; Data Management</li>
+      <li>Clear All Data — permanently deletes all logs and settings from your device</li>
+      <li>Disable Notifications — toggle reminders off at any time in Settings</li>
+    </ul>
+    <p>For subscription-related data held by RevenueCat or Google Play, you may submit a data deletion request directly to those services.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the Effective Date at the top of this document. Continued use of GlugLife after changes are made constitutes your acceptance of the revised policy. We will notify users of material changes through an in-app notice where practicable.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span> Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+    <div class="contact-block">
+      <p class="label">Cypress Indigo</p>
+      <p>Email: <a href="mailto:cypressindigo.studio@gmail.com">cypressindigo.studio@gmail.com</a></p>
+      <p>App: GlugLife (<code style="color:var(--muted);font-size:0.85em;">com.gluglife.app</code>)</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Cypress Indigo &nbsp;&middot;&nbsp; GlugLife
+</footer>
+
+</body>
+</html>
